@@ -9,14 +9,14 @@
     <CardHeader>
         <Row Class="justify-content-between">
             <Column ColumnSize="ColumnSize.IsAuto">
-                <h2>@L["Authors"]</h2>
+                <h2>@L["Doctor"]</h2>
             </Column>
             <Column ColumnSize="ColumnSize.IsAuto">
                     @if (CanCreateAuthor)
                     {
                         <Button Color="Color.Primary"
                                 Clicked="OpenCreateAuthorModal">
-                            @L["NewAuthor"]
+                            @L["NewDoctor"]
                         </Button>
                     }
             </Column>
@@ -77,7 +77,7 @@
     <ModalContent IsCentered="true">
         <Form>
             <ModalHeader>
-                <ModalTitle>@L["NewAuthor"]</ModalTitle>
+                <ModalTitle>@L["NewDoctor"]</ModalTitle>
                 <CloseButton Clicked="CloseCreateAuthorModal" />
             </ModalHeader>
             <ModalBody>

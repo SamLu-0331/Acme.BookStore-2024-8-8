@@ -16,13 +16,13 @@
     <CardHeader>
         <Row Class="justify-content-between">
             <Column ColumnSize="ColumnSize.IsAuto">
-                <h2>@L["Books"]</h2>
+                <h2>@L["Patient"]</h2>
             </Column>
             <Column ColumnSize="ColumnSize.IsAuto">
                 @if (HasCreatePermission)
                 {
                     <Button Color="Color.Primary"
-                            Clicked="OpenCreateModalAsync">@L["NewBook"]</Button>
+                            Clicked="OpenCreateModalAsync">@L["NewPatient"]</Button>
                 }
             </Column>
         </Row>
@@ -56,7 +56,7 @@
                                 Caption="@L["Name"]"></DataGridColumn>
                 <DataGridColumn TItem="BookDto"
                                 Field="@nameof(BookDto.AuthorName)"
-                                Caption="@L["Author"]"></DataGridColumn>
+                                Caption="@L["Doctor"]"></DataGridColumn>
                 <DataGridColumn TItem="BookDto"
                                 Field="@nameof(BookDto.Type)"
                                 Caption="@L["Type"]">
@@ -92,7 +92,7 @@
     <ModalContent IsCentered="true">
         <Form>
             <ModalHeader>
-                <ModalTitle>@L["NewBook"]</ModalTitle>
+                <ModalTitle>@L["NewPatient"]</ModalTitle>
                 <CloseButton Clicked="CloseCreateModalAsync"/>
             </ModalHeader>
             <ModalBody>
@@ -163,7 +163,7 @@
                 <Validations @ref="@EditValidationsRef" Model="@NewEntity" ValidateOnLoad="false">
                     <Validation MessageLocalizer="@LH.Localize">
                         <Field>
-                            <FieldLabel>@L["Author"]</FieldLabel>
+                            <FieldLabel>@L["Doctor"]</FieldLabel>
                             <Select TValue="Guid" @bind-SelectedValue="@EditingEntity.AuthorId">
                                 @foreach (var author in authorList)
                                 {

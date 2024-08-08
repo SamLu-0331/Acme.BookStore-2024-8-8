@@ -54,7 +54,7 @@ private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
 
     var bookStoreMenu = new ApplicationMenuItem(
         "BooksStore",
-        l["Menu:BookStore"],
+        l["Menu:Hospital"],
         icon: "fa fa-book"
     );
 
@@ -65,7 +65,7 @@ private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
     {
         bookStoreMenu.AddItem(new ApplicationMenuItem(
             "BooksStore.Books",
-            l["Menu:Books"],
+            l["Patient"],
             url: "/books"
         ));
     }
@@ -73,7 +73,7 @@ private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
     {
         context.Menu.AddItem(new ApplicationMenuItem(
             "BooksStore.Authors",
-            l["Menu:Authors"],
+            l["Doctor"],
             url: "/authors"
         ));
     }
