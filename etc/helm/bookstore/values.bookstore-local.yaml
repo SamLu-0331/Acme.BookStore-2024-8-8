@@ -1,0 +1,11 @@
+global:
+  hosts:
+    dbmigrator: "[RELEASE_NAME]-dbmigrator"
+    httpapi: "[RELEASE_NAME]-httpapihost"
+    blazor: "[RELEASE_NAME]-blazor"
+  connectionStrings:
+  dotnetEnvironment: "Staging"
+  disablePII: "false"
+  stringEncryptionDefaultPassPhrase: "eEWwe5byaT5byts5"
+  abpStudioClient:
+    isLinkEnabled: "true"
